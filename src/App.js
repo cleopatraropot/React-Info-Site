@@ -1,29 +1,28 @@
 import './App.css';
 import ReactDOM from 'react-dom/client';
+import Header from './components/header/header';
+import Footer from './components/footer/footer';
+import MainContent from './components/main-content/main-content';
 
-const page = (
-    <div>
-      <img src="/main-logo.png" style={{width: '70px'}} alt="React Logo."/>
-      <h1>Fun fact about react</h1>
-      <ul>
-        <li>Was first released in 2013</li>
-        <li>Was originally created in Jordan Walke</li>
-        <li>Has well over 100K stars on GitHub</li>
-        <li>Is maintained by Facebook</li>
-        <li>Powers thousands of enterprise apps, including mobile apps</li>
-      </ul>
-    </div>
-)
+function Page() {
+    return (
+        <div>
+            <Header />
+            <MainContent />
+            <Footer />
+        </div>
+    )
+}
 
 const rootElement = document.getElementById('root');
 const root = ReactDOM.createRoot(rootElement);
-root.render(page)
+root.render(<Page />)
 
 function App() {
-  return (
-      <div className="root">
-      </div>
-  );
+    return (
+        <div className="root">
+        </div>
+    );
 }
 
 export default App;
